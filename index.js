@@ -27,5 +27,23 @@ const compare = (playerNum, computerNum) => {
     return result;
 }
 
+function game () {
+    const userNum = parseInt(document.getElementById("num").value)
+    let playerResult
+    const random = randomNum()
+
+    if(userNum > 10 || userNum < 0){
+        responseElement.innerHTML = messages.correctNumbers
+        return
+    }    
+    const comparing = compare(userNum, random)
+    responseElement.innerHTML = comparing
+
+    history.push({numUser: userNum , numRandom: random, finalResult: comparing})
+
+    console.log(history);   
+
+    previusGames.innerHTML = history
+}
 
 
