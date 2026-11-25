@@ -32,7 +32,7 @@ function game () {
     let playerResult
     const random = randomNum()
 
-    if(userNum > 10 || userNum < 0){
+    if(userNum > 10 || userNum < 0 || isNaN(userNum)){
         responseElement.innerHTML = messages.correctNumbers
         return
     }    
@@ -46,7 +46,7 @@ function game () {
     previusGames.innerHTML = history.map(history => 
         `Número del usuario: ${history.numUser} <br>
         Número aleatorio: ${history.numRandom} <br>
-        Resultado final: ${history.finalResult} <br>`
+        Resultado final: ${history.finalResult} <br> <hr>`
     )
 }
 
