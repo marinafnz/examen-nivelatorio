@@ -1,6 +1,5 @@
 "use strict";
 
-const userNum = parseInt(document.getElementById("num")).value 
 const button = document.getElementById("btn");
 const responseElement = document.getElementById("response");
 const previusGames = document.getElementById("previus");
@@ -11,15 +10,22 @@ const messages = {
     correctNumbers : "Debes colocar un número correcto",
 }
 
-const record = {}
+const history = []
 
 const randomNum = () => {
-    const randomNumber = Math.floor(Math.random() * 10)
+    const randomNumber = Math.ceil(Math.random() * 10)
     return randomNumber
 }
 
-console.log(randomNum());
-
+const compare = (playerNum, computerNum) => {
+    let result;
+    if (playerNum === computerNum) {
+        result = messages.win;
+    } else {
+        result = messages.lose;
+    }
+    return result;
+}
 
 
 
