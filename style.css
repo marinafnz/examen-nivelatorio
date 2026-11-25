@@ -11,9 +11,13 @@ body {
 #btn {
     border: solid 1px white;
     border-radius: 5px;
-    background-color: darkgoldenrod;
+    background-color: rgb(183, 101, 227);
     color: black;
     font-weight: bold;
+}
+
+#btn:hover {
+    background-color: crimson;
 }
 
 main {
