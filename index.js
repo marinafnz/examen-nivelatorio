@@ -43,7 +43,11 @@ function game () {
 
     console.log(history);   
 
-    previusGames.innerHTML = history
+    previusGames.innerHTML = history.map(history => 
+        `Número del usuario: ${history.numUser} <br>
+        Número aleatorio: ${history.numRandom} <br>
+        Resultado final: ${history.finalResult} <br>`
+    )
 }
 
 
