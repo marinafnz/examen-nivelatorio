@@ -1,9 +1,5 @@
 "use strict";
 
-const button = document.getElementById("btn");
-const responseElement = document.getElementById("response");
-const previusGames = document.getElementById("previus");
-
 const messages = {
     win : "GANASTE",
     lose : "PERDISTE",
@@ -29,8 +25,10 @@ const compare = (playerNum, computerNum) => {
 
 function game () {
     const userNum = parseInt(document.getElementById("num").value)
-    let playerResult
-    const random = randomNum()
+    const random = randomNum()    
+    const button = document.getElementById("btn");
+    const responseElement = document.getElementById("response");
+    const previusGames = document.getElementById("previus");
 
     if(userNum > 10 || userNum < 0 || isNaN(userNum)){
         responseElement.innerHTML = messages.correctNumbers
